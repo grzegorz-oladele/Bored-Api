@@ -15,6 +15,7 @@ public class BoredServiceImpl implements BoredService {
 
     @Override
     public BoredDto getBored() {
-        return null;
+        BoredDto response = restTemplate.getForObject("https://www.boredapi.com/api/activity/", BoredDto.class);
+        return objectMapper.convertValue(response, BoredDto.class);
     }
 }
