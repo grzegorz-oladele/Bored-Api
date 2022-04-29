@@ -11,7 +11,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Table(name = "activities")
-@NoArgsConstructor
 public class BoredEntity {
 
     @Id
@@ -22,6 +21,7 @@ public class BoredEntity {
     private int participants;
     private double price;
     private String link;
+    @Column(name = "bored_key")
     private String key;
     private double accessibility;
 }
