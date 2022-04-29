@@ -5,4 +5,6 @@ import pl.grzegorz.boredapi.model.dto.BoredDto;
 public interface BoredService {
 
     BoredDto getBored();
+
+    BoredDto addBored(BoredDto boredDto);
 }
