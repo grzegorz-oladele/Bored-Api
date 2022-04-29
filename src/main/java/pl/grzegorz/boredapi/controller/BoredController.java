@@ -1,10 +1,9 @@
 package pl.grzegorz.boredapi.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.grzegorz.boredapi.model.dto.BoredDto;
+import pl.grzegorz.boredapi.model.dto.BoredDtoInfo;
 import pl.grzegorz.boredapi.service.BoredService;
 
 @RestController
@@ -17,5 +16,10 @@ public class BoredController {
     @GetMapping
     public BoredDto getBored() {
         return boredService.getBored();
+    }
+
+    @PostMapping
+    public BoredDtoInfo addBored(@RequestBody BoredDto boredDto) {
+        return boredService.addBored(boredDto);
     }
 }
