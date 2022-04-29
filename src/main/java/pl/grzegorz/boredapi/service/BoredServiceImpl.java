@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-import pl.grzegorz.boredapi.model.BoredDto;
+import pl.grzegorz.boredapi.model.dto.BoredDto;
 
 @Service
 @RequiredArgsConstructor

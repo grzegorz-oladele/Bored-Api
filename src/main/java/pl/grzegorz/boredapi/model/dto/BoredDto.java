@@ -1,4 +1,4 @@
-package pl.grzegorz.boredapi.model;
+package pl.grzegorz.boredapi.model.dto;
 
 import lombok.Getter;
 import lombok.Setter;
