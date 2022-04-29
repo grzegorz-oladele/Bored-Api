@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import pl.grzegorz.boredapi.mapper.BoredMapper;
 import pl.grzegorz.boredapi.model.dto.BoredDto;
+import pl.grzegorz.boredapi.model.dto.BoredDtoInfo;
 import pl.grzegorz.boredapi.model.entity.BoredEntity;
 import pl.grzegorz.boredapi.repository.BoredRepository;
 
@@ -25,9 +26,9 @@ public class BoredServiceImpl implements BoredService {
     }
 
     @Override
-    public BoredDto addBored(BoredDto boredDto) {
+    public BoredDtoInfo addBored(BoredDto boredDto) {
         BoredEntity boredEntity = boredMapper.fromDtoToEntity(boredDto);
         boredRepository.save(boredEntity);
-        return null;
+        return boredMapper.fromEntityToDtoInfo(boredEntity);
     }
 }
