@@ -1,6 +1,6 @@
 package pl.grzegorz.boredapi.service;
 
-import pl.grzegorz.boredapi.model.BoredDto;
+import pl.grzegorz.boredapi.model.dto.BoredDto;
 
 public interface BoredService {
 
