@@ -75,3 +75,6 @@ fabric.properties
 
 ### application properties with dev properties
 src/main/resources/application-dev.properties
+
+target
+
