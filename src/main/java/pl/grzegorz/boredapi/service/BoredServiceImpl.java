@@ -21,12 +21,12 @@ public class BoredServiceImpl implements BoredService {
 
     @Override
     public BoredDto getBored() {
-        BoredDto response = restTemplate.getForObject("https://www.boredapi.com/api/activity/", BoredDto.class);
-        return objectMapper.convertValue(response, BoredDto.class);
+        return null;
     }
 
     @Override
-    public BoredDtoInfo addBored(BoredDto boredDto) {
+    public BoredDtoInfo addBored() {
+        BoredDto boredDto = restTemplate.getForObject("https://www.boredapi.com/api/activity/", BoredDto.class);
         BoredEntity boredEntity = boredMapper.fromDtoToEntity(boredDto);
         boredRepository.save(boredEntity);
         return boredMapper.fromEntityToDtoInfo(boredEntity);

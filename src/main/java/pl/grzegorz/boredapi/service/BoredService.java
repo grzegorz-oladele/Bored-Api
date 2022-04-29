@@ -7,5 +7,5 @@ public interface BoredService {
 
     BoredDto getBored();
 
-    BoredDtoInfo addBored(BoredDto boredDto);
+    BoredDtoInfo addBored();
 }
