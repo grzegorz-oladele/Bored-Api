@@ -11,7 +11,6 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Table(name = "activities")
-@Builder
 @NoArgsConstructor
 public class BoredEntity {
 
