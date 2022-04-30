@@ -26,6 +26,6 @@ public class LogServiceImpl implements LogService {
 
     @Override
     public List<Log> getAllLogs() {
-        return null;
+        return logRepository.findAll();
     }
 }
