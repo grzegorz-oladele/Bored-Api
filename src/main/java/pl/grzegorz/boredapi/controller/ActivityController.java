@@ -4,20 +4,18 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import pl.grzegorz.boredapi.model.dto.LogDtoInfo;
-import pl.grzegorz.boredapi.service.log.LogService;
-
-import java.util.List;
+import pl.grzegorz.boredapi.model.dto.ActivityDtoInfo;
+import pl.grzegorz.boredapi.service.activity.ActivityService;
 
 @RestController
-@RequestMapping("/api/logs")
+@RequestMapping("/api/bored")
 @RequiredArgsConstructor
-public class LogController {
+public class ActivityController {
 
-    private final LogService logService;
+    private final ActivityService activityService;
 
     @GetMapping
-    public List<LogDtoInfo> getAllLogs() {
-        return logService.getAllLogs();
+    public ActivityDtoInfo addBored() {
+        return activityService.addBored();
     }
 }

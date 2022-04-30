@@ -1,13 +1,13 @@
 package pl.grzegorz.boredapi.service.log;
 
-import pl.grzegorz.boredapi.model.dto.LogDtoInfo;
+import pl.grzegorz.boredapi.model.dto.ActivityLogDtoInfo;
 import pl.grzegorz.boredapi.model.entity.ActivityLog;
 
 import java.util.List;
 
-public interface LogService {
+public interface ActivityLogService {
     
     void addLog(ActivityLog log);
     
-    List<LogDtoInfo> getAllLogs();
+    List<ActivityLogDtoInfo> getAllLogs();
 }

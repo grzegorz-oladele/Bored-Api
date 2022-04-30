@@ -5,8 +5,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class BoredDto {
+public class ActivityDtoInfo {
 
+    private long id;
     private String activity;
     private String type;
     private int participants;

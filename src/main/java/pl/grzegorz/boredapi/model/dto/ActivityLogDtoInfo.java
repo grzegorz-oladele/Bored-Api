@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class LogDtoInfo {
+public class ActivityLogDtoInfo {
 
     private long id;
     private String activityKey;
