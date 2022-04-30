@@ -6,17 +6,20 @@ import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import pl.grzegorz.boredapi.mapper.LogMapper;
+import pl.grzegorz.boredapi.model.dto.LogDtoInfo;
 import pl.grzegorz.boredapi.model.entity.Log;
 import pl.grzegorz.boredapi.repository.LogRepository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
 public class LogServiceImpl implements LogService {
 
     private final LogRepository logRepository;
-    private final ApplicationEventPublisher eventPublisher;
+    private final LogMapper logMapper;
 
     @Async
     @Override
@@ -25,7 +28,15 @@ public class LogServiceImpl implements LogService {
     }
 
     @Override
-    public List<Log> getAllLogs() {
-        return logRepository.findAll();
+    public List<LogDtoInfo> getAllLogs() {
+        List<Log> logs = logRepository.findAll();
+        return toDtoInfoList(logs);
+    }
+
+    private List<LogDtoInfo> toDtoInfoList(List<Log> logs) {
+        return logs
+                .stream()
+                .map(logMapper::fromEntityToDtoInfo)
+                .collect(Collectors.toList());
     }
 }
