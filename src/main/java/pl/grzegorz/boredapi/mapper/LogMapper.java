@@ -3,14 +3,14 @@ package pl.grzegorz.boredapi.mapper;
 import org.springframework.stereotype.Component;
 import pl.grzegorz.boredapi.builder.LogDtoInfoBuilder;
 import pl.grzegorz.boredapi.model.dto.LogDtoInfo;
-import pl.grzegorz.boredapi.model.entity.Log;
+import pl.grzegorz.boredapi.model.entity.ActivityLog;
 
 import java.util.Objects;
 
 @Component
 public class LogMapper {
 
-    public LogDtoInfo fromEntityToDtoInfo(Log log) {
+    public LogDtoInfo fromEntityToDtoInfo(ActivityLog log) {
         if (log == null) {
             return null;
         }
