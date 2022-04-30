@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Log {
+public class ActivityLog {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,7 +19,7 @@ public class Log {
     private String activityKey;
     private LocalDateTime creationDate;
 
-    public Log(String activityKey) {
+    public ActivityLog(String activityKey) {
         this.activityKey = activityKey;
     }
 
