@@ -10,6 +10,8 @@ import pl.grzegorz.boredapi.model.dto.BoredDtoInfo;
 import pl.grzegorz.boredapi.model.entity.BoredEntity;
 import pl.grzegorz.boredapi.repository.BoredRepository;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class BoredServiceImpl implements BoredService {
@@ -18,6 +20,7 @@ public class BoredServiceImpl implements BoredService {
     private final ObjectMapper objectMapper;
     private final BoredRepository boredRepository;
     private final BoredMapper boredMapper;
+    private final BoredHelper boredHelper;
 
     @Override
     public BoredDto getBored() {
@@ -27,8 +30,13 @@ public class BoredServiceImpl implements BoredService {
     @Override
     public BoredDtoInfo addBored() {
         BoredDto boredDto = restTemplate.getForObject("https://www.boredapi.com/api/activity/", BoredDto.class);
+        boredHelper.checkPresenceActivity(getBoredList(), boredDto.getKey());
         BoredEntity boredEntity = boredMapper.fromDtoToEntity(boredDto);
         boredRepository.save(boredEntity);
         return boredMapper.fromEntityToDtoInfo(boredEntity);
+    }
+
+    private List<BoredEntity> getBoredList() {
+        return boredRepository.findAll();
     }
 }
