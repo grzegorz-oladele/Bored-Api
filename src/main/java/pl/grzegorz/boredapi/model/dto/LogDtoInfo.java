@@ -10,5 +10,4 @@ public class LogDtoInfo {
     private long id;
     private String activityKey;
     private String creationDate;
-    private String creationTime;
 }
