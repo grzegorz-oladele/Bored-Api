@@ -1,4 +1,4 @@
-package pl.grzegorz.boredapi.service;
+package pl.grzegorz.boredapi.service.activity;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;

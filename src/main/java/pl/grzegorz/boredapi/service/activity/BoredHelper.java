@@ -1,4 +1,4 @@
-package pl.grzegorz.boredapi.service;
+package pl.grzegorz.boredapi.service.activity;
 
 import org.springframework.stereotype.Component;
 import pl.grzegorz.boredapi.exception.bored.BoredError;

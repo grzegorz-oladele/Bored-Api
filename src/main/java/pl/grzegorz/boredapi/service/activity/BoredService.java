@@ -1,4 +1,4 @@
-package pl.grzegorz.boredapi.service;
+package pl.grzegorz.boredapi.service.activity;
 
 import pl.grzegorz.boredapi.model.dto.BoredDto;
 import pl.grzegorz.boredapi.model.dto.BoredDtoInfo;
