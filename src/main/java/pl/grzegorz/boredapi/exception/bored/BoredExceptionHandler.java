@@ -14,6 +14,9 @@ public class BoredExceptionHandler {
         if (BoredError.BORED_NULL.equals(e.getBoredError())) {
             httpStatus = HttpStatus.NO_CONTENT;
         }
+        if (BoredError.BORED_ALREADY_EXISTS.equals(e.getBoredError())) {
+            httpStatus = HttpStatus.BAD_REQUEST;
+        }
         return ResponseEntity.status(httpStatus).body(new BoredErrorInfo(e.getBoredError().getMessage()));
     }
 }
