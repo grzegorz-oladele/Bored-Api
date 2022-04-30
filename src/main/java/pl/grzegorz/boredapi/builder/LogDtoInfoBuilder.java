@@ -7,7 +7,6 @@ public class LogDtoInfoBuilder {
     private long id;
     private String activityKey;
     private String creationDate;
-    private String creationTime;
 
     public LogDtoInfoBuilder withId(long id) {
         this.id = id;
@@ -24,17 +23,11 @@ public class LogDtoInfoBuilder {
         return this;
     }
 
-    public LogDtoInfoBuilder withCreationTime(String creationTime) {
-        this.creationTime = creationTime;
-        return this;
-    }
-
     public LogDtoInfo build() {
         LogDtoInfo logDtoInfo = new LogDtoInfo();
         logDtoInfo.setId(id);
         logDtoInfo.setActivityKey(activityKey);
         logDtoInfo.setCreationDate(creationDate);
-        logDtoInfo.setCreationTime(creationTime);
         return logDtoInfo;
     }
 }
