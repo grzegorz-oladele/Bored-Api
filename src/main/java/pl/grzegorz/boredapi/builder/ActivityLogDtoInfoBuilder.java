@@ -42,6 +42,12 @@ public class ActivityLogDtoInfoBuilder {
         return this;
     }
 
+    /**
+     * The task of the method is to build a new object of ActivityLogDtoInfo type using all available parameters
+     * of ActivityLogDtoInfo class.
+     * @return a new object of type ActivityLogDtoInfo.
+     */
+
     public ActivityLogDtoInfo build() {
         ActivityLogDtoInfo activityLogDtoInfo = new ActivityLogDtoInfo();
         activityLogDtoInfo.setId(id);
