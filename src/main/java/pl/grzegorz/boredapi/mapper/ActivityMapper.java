@@ -1,8 +1,8 @@
 package pl.grzegorz.boredapi.mapper;
 
 import org.springframework.stereotype.Component;
-import pl.grzegorz.boredapi.builder.ActivityDtoInfoBuilder;
 import pl.grzegorz.boredapi.builder.ActivityBuilder;
+import pl.grzegorz.boredapi.builder.ActivityDtoInfoBuilder;
 import pl.grzegorz.boredapi.exception.activity.ActivityError;
 import pl.grzegorz.boredapi.exception.activity.ActivityException;
 import pl.grzegorz.boredapi.model.dto.ActivityDto;

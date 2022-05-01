@@ -19,7 +19,7 @@ public class Activity {
     private int participants;
     private double price;
     private String link;
-    @Column(name = "bored_key")
+    @Column(name = "activity_key")
     private String key;
     private double accessibility;
 }
