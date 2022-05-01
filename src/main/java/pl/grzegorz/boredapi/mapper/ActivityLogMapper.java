@@ -7,8 +7,19 @@ import pl.grzegorz.boredapi.model.entity.ActivityLog;
 
 import java.util.Objects;
 
+/**
+ * Class used to map log objects in an application
+ */
+
 @Component
 public class ActivityLogMapper {
+
+    /**
+     *Method used to repaint an object of type ActivityLog into an ActivityLogDtoInfo object,
+     * which will then be passed to the frontend application.
+     * @param activityLog object taken directly from the database
+     * @return object of type ActivityLogDtoInfo
+     */
 
     public ActivityLogDtoInfo fromEntityToDtoInfo(ActivityLog activityLog) {
         if (activityLog == null) {
