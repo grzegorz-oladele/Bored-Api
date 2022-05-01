@@ -36,7 +36,7 @@ public class ActivityServiceImpl implements ActivityService {
      * The purpose of the method is to add a new activity to the method database. If the activity already exists
      * in the database it will not be written again. The user will be informed and asked to download the activity again.
      *
-     * @return obiekt typu ActivityDtoInfo z użyciem metody z klasyActivityMapper.
+     * @return ActivityDtoInfo object using method fromActivityMapper class.
      * @throws ActivityException when the downloaded activity is already in the database.
      *                           Validation is performed on the activity key value
      */

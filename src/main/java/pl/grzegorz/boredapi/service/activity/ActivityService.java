@@ -10,6 +10,7 @@ public interface ActivityService {
 
     /**
      * A method to add a new activity to the database.
+     *
      * @return remapped object of type ActivityDtoInfo
      */
     ActivityDtoInfo addActivity();
