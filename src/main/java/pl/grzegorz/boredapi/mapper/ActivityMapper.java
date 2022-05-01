@@ -11,8 +11,20 @@ import pl.grzegorz.boredapi.model.entity.Activity;
 
 import java.util.Objects;
 
+/**
+ * Class provides methods to map Activity and ActivityDto objects
+ */
+
 @Component
 public class ActivityMapper {
+
+    /**
+     * Method to map an object of type ActivityDto an object of type Activity, which will be stored in the database.
+     * The object of ActivityDto type cannot be NULL (the method throws an exception)
+     *
+     * @param activityDto object retrieved from https://www.boredapi.com/api/activity
+     * @return new object of type Activity
+     */
 
     public Activity fromDtoToEntity(ActivityDto activityDto) {
         if (activityDto == null) {
@@ -42,6 +54,13 @@ public class ActivityMapper {
         }
         return activityBuilder.build();
     }
+
+    /**
+     * Method used to map an Activity object to an ActivityDtoInfo object to be displayed in a frontend application
+     *
+     * @param activity object retrieved from database
+     * @return new object of type ActivityDtoInfo
+     */
 
     public ActivityDtoInfo fromEntityToDtoInfo(Activity activity) {
         if (activity == null) {

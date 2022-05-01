@@ -17,6 +17,11 @@ import pl.grzegorz.boredapi.service.web_client.WebClientService;
 
 import java.time.LocalDateTime;
 
+/**
+ * A class used to process, pass to the controller and store in the database information related to activities
+ * downloaded from the external API
+ */
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -26,6 +31,15 @@ public class ActivityServiceImpl implements ActivityService {
     private final ActivityMapper activityMapper;
     private final WebClientService webClientService;
     private final ActivityLogService activityLogService;
+
+    /**
+     * The purpose of the method is to add a new activity to the method database. If the activity already exists
+     * in the database it will not be written again. The user will be informed and asked to download the activity again.
+     *
+     * @return obiekt typu ActivityDtoInfo z użyciem metody z klasyActivityMapper.
+     * @throws ActivityException when the downloaded activity is already in the database.
+     *                           Validation is performed on the activity key value
+     */
 
     @Override
     @Transactional
@@ -39,6 +53,13 @@ public class ActivityServiceImpl implements ActivityService {
         return activityMapper.fromEntityToDtoInfo(activity);
     }
 
+    /**
+     * The purpose of the method is to throw an exception when the activity with the specified key already exists
+     * in the database
+     *
+     * @param key a unique key assigned to the activity
+     */
+
     protected void checkKey(String key) {
         if (existsByKey(key)) {
             activityLogService.addLog(new ActivityLog(key));
@@ -46,6 +67,14 @@ public class ActivityServiceImpl implements ActivityService {
             throw new ActivityException(ActivityError.ACTIVITY_ALREADY_EXISTS);
         }
     }
+
+    /**
+     * The purpose of the method is to check if there is an activity in the database with the given key value
+     *
+     * @param key a unique key assigned to the activity
+     * @return true if activity with specified key is already in the database or false if such activity is not
+     * in the database
+     */
 
     private boolean existsByKey(String key) {
         return activityRepository.existsByKey(key);
