@@ -15,13 +15,7 @@ public class ActivityController {
     private final ActivityService activityService;
 
     @GetMapping
-    public ActivityDtoInfo addBored() {
+    public ActivityDtoInfo addActivity() {
         return activityService.addActivity();
     }
 }
-
-//    @GetMapping()
-//    public String check(@RequestParam String key) {
-//        return activityService.check(key);
-//    }
-//}
