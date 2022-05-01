@@ -8,7 +8,7 @@ import pl.grzegorz.boredapi.model.dto.ActivityDtoInfo;
 import pl.grzegorz.boredapi.service.activity.ActivityService;
 
 @RestController
-@RequestMapping("/api/bored")
+@RequestMapping("/api/activities")
 @RequiredArgsConstructor
 public class ActivityController {
 
@@ -16,6 +16,12 @@ public class ActivityController {
 
     @GetMapping
     public ActivityDtoInfo addBored() {
-        return activityService.addBored();
+        return activityService.addActivity();
     }
 }
+
+//    @GetMapping()
+//    public String check(@RequestParam String key) {
+//        return activityService.check(key);
+//    }
+//}

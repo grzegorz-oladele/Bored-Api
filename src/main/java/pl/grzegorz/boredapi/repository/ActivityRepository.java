@@ -6,4 +6,6 @@ import pl.grzegorz.boredapi.model.entity.Activity;
 
 @Repository
 public interface ActivityRepository extends JpaRepository<Activity, Long> {
+
+    boolean existsByKey(String key);
 }
