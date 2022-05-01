@@ -33,7 +33,7 @@ public class ActivityLogServiceImpl implements ActivityLogService {
     public List<ActivityLogDtoInfo> getAllLogs() {
         log.info("Request to get all logs from database " + LocalDateTime.now());
         List<ActivityLog> logs = activityLogRepository.findAll();
-                log.info("Response to a request to return a list of all logs " + LocalDateTime.now());
+        log.info("Response to a request to return a list of all logs " + LocalDateTime.now());
         return toDtoInfoList(logs);
     }
 
