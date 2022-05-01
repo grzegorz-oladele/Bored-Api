@@ -21,6 +21,7 @@ public class ActivityMapper {
     /**
      * Method to map an object of type ActivityDto an object of type Activity, which will be stored in the database.
      * The object of ActivityDto type cannot be NULL (the method throws an exception)
+     *
      * @param activityDto object retrieved from https://www.boredapi.com/api/activity
      * @return new object of type Activity
      */
@@ -56,6 +57,7 @@ public class ActivityMapper {
 
     /**
      * Method used to map an Activity object to an ActivityDtoInfo object to be displayed in a frontend application
+     *
      * @param activity object retrieved from database
      * @return new object of type ActivityDtoInfo
      */

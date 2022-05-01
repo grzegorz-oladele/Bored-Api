@@ -13,6 +13,7 @@ public interface ActivityRepository extends JpaRepository<Activity, Long> {
 
     /**
      * The purpose of the method is to check if there is an activity in the database with the selected value "key"
+     *
      * @param key activity key
      * @return true if activity with specified "key" value exists in database
      */

@@ -102,6 +102,7 @@ public class ActivityDtoInfoBuilder {
     /**
      * The task of the method is to build a new object of ActivityDtoInfo type using all available parameters
      * of ActivityDtoInfo class.
+     *
      * @return a new object of type ActivityDtoInfo.
      */
 

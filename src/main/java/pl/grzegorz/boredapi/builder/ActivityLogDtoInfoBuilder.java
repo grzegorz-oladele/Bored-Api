@@ -45,6 +45,7 @@ public class ActivityLogDtoInfoBuilder {
     /**
      * The task of the method is to build a new object of ActivityLogDtoInfo type using all available parameters
      * of ActivityLogDtoInfo class.
+     *
      * @return a new object of type ActivityLogDtoInfo.
      */
 

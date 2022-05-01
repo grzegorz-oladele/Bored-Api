@@ -22,6 +22,7 @@ public class ActivityLogController {
 
     /**
      * The purpose of this method is to pass all logs from the database to the frontend application
+     *
      * @return list of logs from database
      */
 

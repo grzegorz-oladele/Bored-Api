@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
- *A class whose job is to catch the appropriate exception at runtime and pass the appropriate information
+ * A class whose job is to catch the appropriate exception at runtime and pass the appropriate information
  * to the frontend application.
  */
 
@@ -16,6 +16,7 @@ public class ActivityExceptionHandler {
     /**
      * A method to catch an ActivityException, set the appropriate response code, and display the appropriate
      * error status message.
+     *
      * @param e ActivityException object
      * @return a message depending on the situation in which the exception occurred
      */

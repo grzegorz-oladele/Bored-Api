@@ -15,8 +15,9 @@ import java.util.Objects;
 public class ActivityLogMapper {
 
     /**
-     *Method used to repaint an object of type ActivityLog into an ActivityLogDtoInfo object,
+     * Method used to repaint an object of type ActivityLog into an ActivityLogDtoInfo object,
      * which will then be passed to the frontend application.
+     *
      * @param activityLog object taken directly from the database
      * @return object of type ActivityLogDtoInfo
      */

@@ -88,6 +88,7 @@ public class ActivityBuilder {
 
     /**
      * The task of the method is to build a new object of Activity type using all available parameters of Activity class.
+     *
      * @return a new object of type Activity.
      */
 

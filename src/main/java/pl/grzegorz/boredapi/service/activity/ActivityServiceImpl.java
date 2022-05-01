@@ -35,9 +35,10 @@ public class ActivityServiceImpl implements ActivityService {
     /**
      * The purpose of the method is to add a new activity to the method database. If the activity already exists
      * in the database it will not be written again. The user will be informed and asked to download the activity again.
-     * @return  obiekt typu ActivityDtoInfo z użyciem metody z klasyActivityMapper.
+     *
+     * @return obiekt typu ActivityDtoInfo z użyciem metody z klasyActivityMapper.
      * @throws ActivityException when the downloaded activity is already in the database.
-     * Validation is performed on the activity key value
+     *                           Validation is performed on the activity key value
      */
 
     @Override
@@ -55,6 +56,7 @@ public class ActivityServiceImpl implements ActivityService {
     /**
      * The purpose of the method is to throw an exception when the activity with the specified key already exists
      * in the database
+     *
      * @param key a unique key assigned to the activity
      */
 
@@ -68,6 +70,7 @@ public class ActivityServiceImpl implements ActivityService {
 
     /**
      * The purpose of the method is to check if there is an activity in the database with the given key value
+     *
      * @param key a unique key assigned to the activity
      * @return true if activity with specified key is already in the database or false if such activity is not
      * in the database
