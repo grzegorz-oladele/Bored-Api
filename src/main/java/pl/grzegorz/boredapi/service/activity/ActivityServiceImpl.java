@@ -43,6 +43,7 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Override
     @Transactional
+    //FIXME this method does more than one thing - divide into smaller
     public ActivityDtoInfo addActivity() {
         log.info("Request to add activity to the database " + LocalDateTime.now());
         ActivityDto activityDto = webClientService.getActivityDto();
@@ -59,7 +60,7 @@ public class ActivityServiceImpl implements ActivityService {
      *
      * @param key a unique key assigned to the activity
      */
-
+//TODO checkKeyAndThrowExceptionIfExists
     protected void checkKey(String key) {
         if (existsByKey(key)) {
             activityLogService.addLog(new ActivityLog(key));
